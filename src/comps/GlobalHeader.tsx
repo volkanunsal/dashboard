@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Combobox,
   Dropdown,
@@ -12,14 +12,14 @@ import {
   GlobalHeaderTask,
   IconSettings,
   Popover,
-} from "@salesforce/design-system-react";
+} from '@salesforce/design-system-react';
 
 /* eslint-disable max-len */
 /* eslint-disable no-script-url */
 /* eslint-disable react/prop-types */
 
 const ipsum =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum fermentum eros, vel porta metus dignissim vitae. Fusce finibus sed magna vitae tempus. Suspendisse condimentum, arcu eu viverra vulputate, mauris odio dictum velit, in dictum lorem augue id augue. Proin nec leo convallis, aliquet mi ut, interdum nunc.";
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum fermentum eros, vel porta metus dignissim vitae. Fusce finibus sed magna vitae tempus. Suspendisse condimentum, arcu eu viverra vulputate, mauris odio dictum velit, in dictum lorem augue id augue. Proin nec leo convallis, aliquet mi ut, interdum nunc.';
 
 // Notifications content is currently the contents of a generic `Popover` with markup copied from https://www.lightningdesignsystem.com/components/global-header/#Notifications. This allows content to have tab stops and focus trapping. If you need a more specific/explicit `GlobalHeaderNotification` content, please create an issue.
 const HeaderNotificationsCustomContent = (props) => (
@@ -27,7 +27,7 @@ const HeaderNotificationsCustomContent = (props) => (
     {props.items.map((item) => (
       <li
         className={`slds-global-header__notification ${
-          item.unread ? "slds-global-header__notification_unread" : ""
+          item.unread ? 'slds-global-header__notification_unread' : ''
         }`}
         key={`notification-item-${item.id}`}
       >
@@ -36,7 +36,7 @@ const HeaderNotificationsCustomContent = (props) => (
             <span className="slds-avatar slds-avatar_small">
               <img
                 alt={item.name}
-                src={`/assets/images/${item.avatar}.jpg`}
+                src={`https://lightningdesignsystem.com/assets/images/${item.avatar}.jpg`}
                 title={`${item.name} avatar"`}
               />
             </span>
@@ -57,7 +57,7 @@ const HeaderNotificationsCustomContent = (props) => (
                   {item.comment}
                 </p>
                 <p className="slds-m-top_x-small slds-text-color_weak">
-                  {item.timePosted}{" "}
+                  {item.timePosted}{' '}
                   {item.unread ? (
                     <abbr
                       className="slds-text-link slds-m-horizontal_xxx-small"
@@ -76,7 +76,7 @@ const HeaderNotificationsCustomContent = (props) => (
   </ul>
 );
 HeaderNotificationsCustomContent.displayName =
-  "HeaderNotificationsCustomContent";
+  'HeaderNotificationsCustomContent';
 
 // Profile content is currently the contents of a generic `Popover` with markup copied from https://www.lightningdesignsystem.com/components/global-header/. This allows content to have tab stops and focus trapping. If you need a more specific/explicit `GlobalHeaderProfile` content, please create an issue.
 const HeaderProfileCustomContent = (props) => (
@@ -102,10 +102,10 @@ const HeaderProfileCustomContent = (props) => (
     </div>
   </div>
 );
-HeaderProfileCustomContent.displayName = "HeaderProfileCustomContent";
+HeaderProfileCustomContent.displayName = 'HeaderProfileCustomContent';
 
 class Example extends React.Component {
-  static displayName = "GlobalHeaderExample";
+  static displayName = 'GlobalHeaderExample';
 
   state: { favoritesActionSelected: boolean };
 
@@ -118,30 +118,30 @@ class Example extends React.Component {
 
   render() {
     return (
-      <IconSettings iconPath="/assets/icons">
+      <IconSettings iconPath="/icons">
         <GlobalHeader
-          logoSrc="/assets/images/logo.svg"
+          logoSrc="https://lightningdesignsystem.com/assets/images/logo.svg"
           onSkipToContent={() => {
-            console.log(">>> Skip to Content Clicked");
+            console.log('>>> Skip to Content Clicked');
           }}
           onSkipToNav={() => {
-            console.log(">>> Skip to Nav Clicked");
+            console.log('>>> Skip to Nav Clicked');
           }}
         >
           <GlobalHeaderSearch
             combobox={
               <Combobox
-                assistiveText={{ label: "Search" }}
+                assistiveText={{ label: 'Search' }}
                 events={{
                   onSelect: () => {
-                    console.log(">>> onSelect");
+                    console.log('>>> onSelect');
                   },
                 }}
                 id="header-search-custom-id"
-                labels={{ placeholder: "Search Salesforce" }}
+                labels={{ placeholder: 'Search Salesforce' }}
                 options={[
-                  { id: "email", label: "Email" },
-                  { id: "mobile", label: "Mobile" },
+                  { id: 'email', label: 'Email' },
+                  { id: 'mobile', label: 'Mobile' },
                 ]}
               />
             }
@@ -174,8 +174,8 @@ class Example extends React.Component {
               <Dropdown
                 id="header-task-dropdown-id"
                 options={[
-                  { id: "taskOptionOne", label: "Task Option One" },
-                  { id: "taskOptionTwo", label: "Task Option Two" },
+                  { id: 'taskOptionOne', label: 'Task Option One' },
+                  { id: 'taskOptionTwo', label: 'Task Option Two' },
                 ]}
               />
             }
@@ -201,8 +201,8 @@ class Example extends React.Component {
               <Dropdown
                 id="header-setup-dropdown-id"
                 options={[
-                  { id: "setupOptionOne", label: "Setup Option One" },
-                  { id: "setupOptionTwo", label: "Setup Option Two" },
+                  { id: 'setupOptionOne', label: 'Setup Option One' },
+                  { id: 'setupOptionTwo', label: 'Setup Option Two' },
                 ]}
               />
             }
@@ -216,32 +216,32 @@ class Example extends React.Component {
                   <HeaderNotificationsCustomContent
                     items={[
                       {
-                        action: "mentioned you",
-                        avatar: "avatar2",
+                        action: 'mentioned you',
+                        avatar: 'avatar2',
                         comment:
-                          "@jrogers Could I please have a review on my presentation deck",
+                          '@jrogers Could I please have a review on my presentation deck',
                         id: 1,
-                        name: "Val Handerly",
-                        timePosted: "10 hours ago",
+                        name: 'Val Handerly',
+                        timePosted: '10 hours ago',
                         unread: true,
                       },
                       {
-                        action: "commented on your post",
-                        avatar: "avatar3",
-                        comment: "I totally agree with your sentiment",
+                        action: 'commented on your post',
+                        avatar: 'avatar3',
+                        comment: 'I totally agree with your sentiment',
                         id: 2,
-                        name: "Jon Rogers",
-                        timePosted: "13 hours ago",
+                        name: 'Jon Rogers',
+                        timePosted: '13 hours ago',
                         unread: true,
                       },
                       {
-                        action: "mentioned you",
-                        avatar: "avatar2",
+                        action: 'mentioned you',
+                        avatar: 'avatar2',
                         comment:
                           "@jrogers Here's the conversation I mentioned to you",
                         id: 3,
-                        name: "Rebecca Stone",
-                        timePosted: "1 day ago",
+                        name: 'Rebecca Stone',
+                        timePosted: '1 day ago',
                       },
                     ]}
                   />
@@ -264,6 +264,6 @@ class Example extends React.Component {
     );
   }
 }
-Example.displayName = "GlobalHeaderExample";
+Example.displayName = 'GlobalHeaderExample';
 
 export default Example;

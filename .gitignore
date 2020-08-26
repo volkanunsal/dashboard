@@ -3,4 +3,4 @@
 node_modules
 build
 yarn-error.log
-dist/index.js*
+public/index.js*
