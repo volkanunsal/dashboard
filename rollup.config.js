@@ -10,18 +10,20 @@ import autoprefixer from 'autoprefixer';
 import replace from '@rollup/plugin-replace';
 import json from '@rollup/plugin-json';
 
+const onwarn = function (warning) {
+  if (warning.code === 'CIRCULAR_DEPENDENCY') return;
+  console.warn(warning);
+};
+
 export default {
   input: 'src/index.tsx',
   output: [
     {
       file: 'public/index.js',
       format: 'iife',
-      globals: {
-        shortid: 'shortid',
-      },
     },
   ],
-  externals: ['shortid'],
+  onwarn,
   plugins: [
     typescript(),
     serve('public'),

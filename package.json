@@ -22,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
     "compose-function": "^3.0.3",
     "eslint": "^7.7.0",
     "fp-ts": "^2.8.2",
@@ -52,7 +53,7 @@
     "ts-loader": "^8.0.3",
     "tslib": "^2.0.1",
     "typescript": "^4.0.2",
-    "shortid": "file:./src/vendor/shortid"
+    "shortid": "file:./vendor/shortid"
   },
   "scripts": {
     "build": "rollup -c",

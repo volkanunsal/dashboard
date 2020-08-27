@@ -1,0 +1,7 @@
+{
+	"name": "shortid",
+	"version": "2.2.15",
+	"license": "MIT",
+	"private": true,
+	"main": "index.js"
+}

@@ -13,6 +13,7 @@ import {
   IconSettings,
   Popover,
 } from '@salesforce/design-system-react';
+import GlobalContextBar from './GlobalContextBar';
 
 /* eslint-disable max-len */
 /* eslint-disable no-script-url */
@@ -127,6 +128,7 @@ class Example extends React.Component {
           onSkipToNav={() => {
             console.log('>>> Skip to Nav Clicked');
           }}
+          navigation={<GlobalContextBar />}
         >
           <GlobalHeaderSearch
             combobox={
@@ -259,6 +261,7 @@ class Example extends React.Component {
             }
             userName="Art Vandelay"
           />
+          <GlobalContextBar />
         </GlobalHeader>
       </IconSettings>
     );

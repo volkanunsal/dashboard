@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Header from './comps/GlobalHeader';
+import GlobalHeader from './comps/GlobalHeader';
 
 function App() {
 	return (
 		<div>
-			<Header />
+			<GlobalHeader />
 		</div>
 	);
 }
