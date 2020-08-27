@@ -6144,9 +6144,6 @@ shortid@^2.2.14:
   dependencies:
     nanoid "^2.1.0"
 
-"shortid@file:./vendor/shortid":
-  version "2.2.15"
-
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
